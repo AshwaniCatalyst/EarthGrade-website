@@ -35,7 +35,7 @@ const ProductTypeComponent = () => {
   console.log(Productquery)
   return (
     <>
-      <div className="bg-white  pl-28 pr-28 flex flex-col gap-20 pt-20 pb-24">
+      <div className="bg-white  pl-28 pr-28 flex justify-center items-center flex-col gap-20 pt-20 pb-24">
         <div className="flex flex-wrap gap-20 justify-center items-center ">
           {Productquery.availableProducts.edges.map((node, index) => {
             return (
@@ -52,7 +52,7 @@ const ProductTypeComponent = () => {
             )
           })}
         </div>
-        <div className="bg-[#f1f1f1] justify-center items-center flex-wrap flex pl-28 pr-28 pt-16 pb-16 ">
+        <div className="bg-[#f1f1f1] justify-center items-center flex-wrap flex pl-28 pr-28 pt-16 pb-16 lg:w-[1440px] ">
           <div className="lg:w-2/5 w-full flex">
             <img
               src={

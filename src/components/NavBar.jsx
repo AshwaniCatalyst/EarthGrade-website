@@ -34,7 +34,7 @@ const NavigationBar = () => {
         sx={{ position: "static" }}
         className="flex items-center pl-2.5 pr-2.5 pt-4 pb-4"
       >
-        <nav className="NavBar gap-4">
+        <nav className="NavBar gap-4  lg:w-[1440px] w-full">
           <div className="w-1/5">
             <img
               src={navBarData.navBar.edges[0].node.navbarLogo.url}
@@ -47,7 +47,12 @@ const NavigationBar = () => {
                 (link, index) => {
                   return (
                     <>
-                      <Typography variant="h6">{link}</Typography>
+                      <Typography
+                        variant="h6"
+                        className="cursor-pointer hover:opacity-75"
+                      >
+                        {link}
+                      </Typography>
                     </>
                   )
                 }
@@ -61,7 +66,7 @@ const NavigationBar = () => {
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
-                        <SearchIcon />
+                        <SearchIcon className="cursor-pointer hover:opacity-75" />
                       </InputAdornment>
                     ),
                   }}
@@ -69,12 +74,18 @@ const NavigationBar = () => {
                 />
               </div>
               <div className="flex gap-6">
-                <AccountCircleIcon fontSize="large" />
-                <ShoppingCartIcon fontSize="large" />
+                <AccountCircleIcon
+                  fontSize="large"
+                  className="cursor-pointer hover:opacity-75"
+                />
+                <ShoppingCartIcon
+                  fontSize="large"
+                  className="cursor-pointer hover:opacity-75"
+                />
               </div>
               <div className="lg:hidden md:flex sm:flex">
                 <IconButton size="large" color="inherit">
-                  <MenuIcon />
+                  <MenuIcon className="cursor-pointer" />
                 </IconButton>
               </div>
             </div>

@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s all ease-in-out;
+}
 .NavBar{
     display: flex;
     justify-content: space-between;
@@ -30,9 +35,6 @@
     border: 2px solid red;
   }
   
-  .HeroSectionBg {
-    background-color: #fff2d9;
-  }
   
   .productCardImageContainer{
     display:flex;
@@ -44,6 +46,7 @@
   .EnlargedImageContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-radius: 8px;
   padding: 0 1rem;
   }
@@ -51,7 +54,7 @@
     /* display: block; */
     position:relative;
     
-    left: 97%;
+    left: 48%;
     top: 20px;
     /* z-index: 10; */
   }
