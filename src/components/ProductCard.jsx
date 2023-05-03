@@ -2,9 +2,8 @@ import React from "react"
 import ButtonComponent from "./ButtonComponent"
 import { IconButton, Typography } from "@mui/material"
 import { FavoriteBorderOutlined } from "@mui/icons-material"
-import cardImage from "../images/Earthgrade_PaperRollPhotog2 copy.svg"
 
-const ProductCard = () => {
+const ProductCard = ({productTitle,productDescription,productPrice,productImage}) => {
   return (
     <>
       <div className="ProductCardOuterContainer bg-white ">
@@ -19,19 +18,18 @@ const ProductCard = () => {
           >
             <FavoriteBorderOutlined fontSize="large" color="secondary" />
           </IconButton>
-          <img src={cardImage} alt="Product_Image" />
+          <img src={productImage} alt="Product_Image" />
         </div>
         <div className=" flex flex-col items-center gap-4 text-center">
           <Typography variant="h4" color={"primary"}>
-            Biodecycable Bubble Paper Wrap
+            {productTitle}
           </Typography>
           <Typography variant="h5" color={"primary.dark"}>
-            Discover our sustainable packaging solution. Earthgrade Bubble Paper
-            Wrap.
+            {productDescription}
           </Typography>
           <div className="flex flex-wrap mt-1  items-center gap-2">
             <Typography variant="h6" color="secondary">
-              $100.00
+              {productPrice}
             </Typography>
             <ButtonComponent btnText={"Buy Now"} btnWidth={"168px"} />
           </div>

@@ -11,10 +11,12 @@ const index = () => {
     <>
       <ThemeProvider theme={Theme}>
         <NavigationBar />
-        <HeroSection/>
-        <ProductTypeComponent/>
-        <ProductCardDisplayComponent/>
-        <EnlargedProductCard/>
+        <HeroSection />
+        <ProductTypeComponent />
+        <ProductCardDisplayComponent edgeNumber={0} />
+
+        <ProductCardDisplayComponent edgeNumber={1} />
+        <EnlargedProductCard />
       </ThemeProvider>
     </>
   )
